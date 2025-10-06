@@ -1,0 +1,7 @@
+{
+  "name": "star_wars_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
