@@ -13,16 +13,16 @@ export const routes: Routes = [
     children:[
       {
         path: '',
-        redirectTo: 'character-detail-page',
+        redirectTo: 'characters-page',
         pathMatch: 'full',
       },
       {
-        path: 'character-detail-page',
-        loadComponent: () => import('./pages/character-detail-page/character-detail-page.page').then( m => m.CharacterDetailPagePage)
+        path: 'planets-page',
+        loadComponent: () => import('./pages/planets-page/planets-page.page').then( m => m.PlanetsPagePage)
       },
       {
-        path: 'planet-detail-page',
-        loadComponent: () => import('./pages/planet-detail-page/planet-detail-page.page').then( m => m.PlanetDetailPagePage)
+        path: 'characters-page',
+        loadComponent: () => import('./pages/characters-page/characters-page.page').then( m => m.CharactersPagePage)
       },
       {
         path: 'search',
@@ -30,5 +30,13 @@ export const routes: Routes = [
       },
     ]
   },
- 
+  {
+    path: 'character-detail-page',
+    loadComponent: () => import('./pages/character-detail-page/character-detail-page.page').then( m => m.CharacterDetailPagePage)
+  },
+  {
+    path: 'planet-detail-page',
+    loadComponent: () => import('./pages/planet-detail-page/planet-detail-page.page').then( m => m.PlanetDetailPagePage)
+  },
+
 ];
