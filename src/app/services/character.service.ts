@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class characterService {
+export class CharacterService {
   private readonly http:HttpClient = inject(HttpClient);
 
   constructor() {}

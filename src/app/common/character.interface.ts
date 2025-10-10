@@ -20,4 +20,5 @@ export interface Character {
   mentor?: string
   apprentices?: string[]
   bio: string
+  dark_side: boolean
 }
