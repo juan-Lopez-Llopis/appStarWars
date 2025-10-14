@@ -1,13 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>planetDetailPage</ion-title>
+<ion-header >
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-title ion-text-center">Detalle de planeta</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">planetDetailPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" color="dark">
+  
+  @if (planet) {
+    <ion-card>
+      <ion-card-title class="ion-text-center ion-text-capitalize">
+        <h1><b>{{planet.name}}</b></h1>
+      </ion-card-title>
+      <ion-img [src]="planet.image"></ion-img>
+      <ion-card-content>
+        <h3><b>Región:</b> {{planet.region}}</h3>
+        <h3><b>Sector:</b> {{planet.sector}}</h3>
+        <h3><b>Sistema:</b> {{planet.system}}</h3>
+        <h3><b>Lunas:</b> {{planet.moons}}</h3>
+        <h3><b>Periodo de rotación:</b> {{planet.rotation_period}}</h3>
+        <h3><b>Periodo orbital:</b> {{planet.orbital_period}}</h3>
+        <h3><b>Diámetro:</b> {{planet.diameter}}</h3>
+        <h3><b>Clima:</b> {{planet.climates}}</h3>
+        <h3><b>Gravedad:</b> {{planet.gravity}}</h3>
+        <h3><b>Terreno:</b> {{planet.terrains}}</h3>
+        <h3><b>Agua en la superficie:</b> {{planet.surface_water}}</h3>
+        <h3><b>Población:</b> {{planet.population}}</h3>
+        <h3><b>Especie nativa:</b> {{planet.native_species}}</h3>
+        <h3><b>Aparición:</b> {{planet.appearances}}</h3>
+      </ion-card-content>
+    </ion-card>
+  }
 </ion-content>

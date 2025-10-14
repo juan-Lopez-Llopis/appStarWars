@@ -1,13 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Personajes</ion-title>
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title  class="ion-title ion-text-center">Detalle de personaje</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">characterDetailPage</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" color="dark">
+
+  @if (character) {
+    <ion-card>
+      <ion-card-title class="ion-text-center ion-text-capitalize">
+        <h1><b>{{character.name}}</b></h1>
+      </ion-card-title>
+      <ion-img [src]="character.image"></ion-img>
+      <ion-card-content>
+        <h3><b>Especie:</b> {{character.species}}</h3>
+        <h3><b>Genero:</b> {{character.gender}}</h3>
+        <h3><b>Color de la piel:</b> {{character.skin_color}}</h3>
+        <h3><b>PLaneta de nacimiento:</b> {{character.homeworld}}</h3>
+        <h3><b>Afiliaciones:</b> {{character.affiliations}}</h3>
+        <h3><b>Armas:</b> {{character.weapons}}</h3>
+        <h3><b>Aliados:</b> {{character.allies}}</h3>
+        <h3><b>Enemigos:</b> {{character.enemies}}</h3>
+        <h3><b>Mentor:</b> {{character.mentor}}</h3>
+        <h3><b>Aprendices:</b> {{character.apprentices}}</h3>
+        <h3><b>Aparición:</b> {{character.appearances}}</h3>
+
+        <ion-label>
+          <h3><b>Biografía:</b></h3><p> {{character.bio}}</p>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+  }
+
 </ion-content>

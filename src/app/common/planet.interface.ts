@@ -1,6 +1,10 @@
 export interface PlanetInterface {
-  status: string
-  data: Planet[]
+  status: string;
+  data: Planet[];
+}
+export interface OnePlanet {
+  status: string;
+  data: Planet;
 }
 
 export interface Planet {

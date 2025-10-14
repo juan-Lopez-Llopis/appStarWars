@@ -2,6 +2,10 @@ export interface CharacterInterface {
   status: string
   data: Character[]
 }
+export interface OneCharacter {
+  status: string;
+  data: Character;
+}
 
 export interface Character {
   _id: string

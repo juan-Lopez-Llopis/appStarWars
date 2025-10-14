@@ -31,11 +31,11 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'character-detail-page',
+    path: 'character-detail-page/:id',
     loadComponent: () => import('./pages/character-detail-page/character-detail-page.page').then( m => m.CharacterDetailPagePage)
   },
   {
-    path: 'planet-detail-page',
+    path: 'planet-detail-page/:id',
     loadComponent: () => import('./pages/planet-detail-page/planet-detail-page.page').then( m => m.PlanetDetailPagePage)
   },
 
