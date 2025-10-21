@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CharacterInterface, OneCharacter } from '../common/character.interface';
+import { Character, CharacterInterface, OneCharacter } from '../common/character.interface';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -17,5 +17,8 @@ export class CharacterService {
   }
   getChararacter(id: string): Observable<OneCharacter> {
     return this.http.get<OneCharacter>(environment.urlBase + "characters/"+ 'character/' + id)
+  }
+  getFilterCharacters(name: string):Observable<Character[]> {
+    return this.http.get<Character[]>(environment.urlBase + "characters/" + "byName?name=" + name)
   }
 }

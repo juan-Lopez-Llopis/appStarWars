@@ -1,13 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="ion-text-center">Search</ion-title>
+<ion-header >
+  <ion-toolbar color="dark">
+    <ion-title class="ion-title ion-text-center">Buscar</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Search</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" color="dark">
+  <ion-toolbar>
+    <ion-searchbar placeholder="Busca personaje o planeta" (ionInput)="buscar($event)"></ion-searchbar>
+  </ion-toolbar>
+  <ion-list>
+    @for (char of characters; track char._id) {
+      <ion-item [routerLink]="'/character-detail-page/' + char._id" >
+            <ion-card >
+              <ion-card-title class="ion-text-center iont-text-capitalize">
+                <h1>{{char.name}}</h1>
+              </ion-card-title>
+              <ion-img src="{{char.image}}" alt="char.name"></ion-img>
+              <h3 class="ion-margin-star">{{char.species}}/ {{char.gender}}</h3>
+              <h3 class="ion-margin-star">{{char.homeworld}}</h3>
+              <p class="ion-margin-star">{{char.bio}}</p>
+            </ion-card>
+
+      </ion-item>
+      
+    }
+      @for (pla of planets; track pla._id) {
+        <ion-item  [routerLink]="'/planet-detail-page/' + pla._id">
+           <ion-card>
+              <ion-card-title class="ion-text-center iont-text-capitalize">
+                <h1>{{pla.name}}</h1>
+              </ion-card-title>
+              <ion-img src="{{pla.image}}" alt="char.name"></ion-img>
+              <h3 class="ion-margin-star">{{pla.region}}/ {{pla.sector}}</h3>
+              <p class="ion-margin-star"><b>Nativos:</b> {{pla.native_species}}</p>
+              <p class="ion-margin-star"><b>Población:</b> {{pla.population}}</p>
+            </ion-card>
+        </ion-item>
+
+           
+    }
+  </ion-list>
 </ion-content>
