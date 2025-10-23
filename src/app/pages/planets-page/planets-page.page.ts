@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItemSliding, IonItem, IonCard, IonImg, IonLabel, IonText, IonAvatar } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItemSliding, IonItem, IonImg, IonLabel, IonText, IonAvatar } from '@ionic/angular/standalone';
 import { PlanetService } from 'src/app/services/planet.service';
 import { LoadingController } from '@ionic/angular';
 import { ToastService } from 'src/app/services/toast.service';
@@ -13,7 +13,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './planets-page.page.html',
   styleUrls: ['./planets-page.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItemSliding, IonItem, IonCard, IonImg, IonLabel, IonText, IonAvatar, RouterLink]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItemSliding, IonItem, IonImg, IonLabel, IonText, IonAvatar, RouterLink]
 })
 export class PlanetsPagePage implements OnInit {
   private readonly planetService: PlanetService = inject(PlanetService);

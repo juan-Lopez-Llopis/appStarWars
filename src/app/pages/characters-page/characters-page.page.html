@@ -1,11 +1,11 @@
-<ion-header >
+<ion-header class="ion-no-border">
   <ion-toolbar color="dark">
     <ion-title class="ion-title ion-text-center" >Personajes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding" color="dark">
-  <ion-list >
+<ion-content [fullscreen]="true" class="ion-padding" color="dark">
+  <ion-list>
     @for (char of characters; track char._id) {
       
         <ion-item [ngClass]="getSideClass(char.dark_side)" [routerLink]="'/character-detail-page/' + char._id">

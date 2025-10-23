@@ -8,7 +8,7 @@
   <ion-list>
     @for (pla of planets; track pla._id) {
       <ion-item-sliding>
-        <ion-item [routerLink]="'/planet-detail-page/' + pla._id">
+        <ion-item color="dark" [routerLink]="'/planet-detail-page/' + pla._id">
           <ion-avatar slot="start">
             <ion-img [src]="pla.image"></ion-img>
           </ion-avatar>

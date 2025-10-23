@@ -55,7 +55,7 @@ export class CharactersPagePage implements OnInit {
   if(isDarkSide === undefined || isDarkSide === null) {
     return 'green-background';
   }
-  return isDarkSide ? 'red-background' : 'green-background'
+  return isDarkSide ? 'black-background' : 'green-background'
  }
 
 }
