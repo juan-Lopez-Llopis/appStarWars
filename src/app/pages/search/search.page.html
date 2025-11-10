@@ -11,7 +11,7 @@
   <ion-list>
     @for (char of characters; track char._id) {
       <ion-item [routerLink]="'/character-detail-page/' + char._id" >
-            <ion-card >
+            <ion-card class="ion-padding">
               <ion-card-title class="ion-text-center iont-text-capitalize">
                 <h1>{{char.name}}</h1>
               </ion-card-title>
@@ -26,7 +26,7 @@
     }
       @for (pla of planets; track pla._id) {
         <ion-item  [routerLink]="'/planet-detail-page/' + pla._id">
-           <ion-card style="width: 100%;">
+           <ion-card class="ion-padding" style="width: 100%;">
               <ion-card-title class="ion-text-center iont-text-capitalize">
                 <h1>{{pla.name}}</h1>
               </ion-card-title>

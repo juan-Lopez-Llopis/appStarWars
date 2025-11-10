@@ -53,9 +53,9 @@ export class CharactersPagePage implements OnInit {
 
  getSideClass(isDarkSide: boolean | undefined): string {
   if(isDarkSide === undefined || isDarkSide === null) {
-    return 'green-background';
+    return 'white-background';
   }
-  return isDarkSide ? 'black-background' : 'green-background'
+  return isDarkSide ? 'black-background' : 'white-background'
  }
 
 }
